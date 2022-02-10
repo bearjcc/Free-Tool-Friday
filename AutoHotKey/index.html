@@ -1,21 +1,64 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>AutoHotKey Email</title>
-	<base href="https://bearjcc.github.io/Free-Tool-Friday/AutoHotKey">
+	<base href="https://bearjcc.github.io/Free-Tool-Friday/AutoHotKey/">
+	<style type="text/css">
+		/* Must have this to send in outlook */
+		table {
+			border-collapse: separate;
+		}
+
+		a,
+		a:link,
+		a:visited {
+			text-decoration: none;
+			color: #00788a;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		h2,
+		h2 a,
+		h2 a:visited,
+		h3,
+		h3 a,
+		h3 a:visited,
+		h4,
+		h5,
+		h6,
+		.t_cht {
+			/* color: #000 !important; */
+		}
+
+		.ExternalClass p,
+		.ExternalClass span,
+		.ExternalClass font,
+		.ExternalClass td {
+			line-height: 100%;
+		}
+
+		.ExternalClass {
+			width: 100%;
+		}
+	</style>
 	<style type="text/css">
 		.body {
 			background-color: #eeeeee;
-			margin: 10px;
 			padding: 10px;
 			border: 1px dashed #00aeef;
+			width: 700px;
 		}
 
 		pre {
-			background: #f4f4f4;
+			background-color: #f4f4f4;
 			border: 1px solid #ddd;
-			border-left: 2px solid hsl(249, 100%, 32%);
+			border-left: 2px solid rgb(24, 0, 163);
 			color: #666;
 			page-break-inside: avoid;
 			font-family: monospace;
@@ -39,16 +82,15 @@
 			padding: 3px;
 		}
 
-		table {
+		.table {
 			border-collapse: collapse;
 		}
 
-		tr:first-of-type {
-			border-bottom: 2px solid hsl(249, 100%, 32%);
+		.bluebottom {
+			border-bottom: 2px solid rgb(24, 0, 163);
 		}
 
-		td,
-		th {
+		.td {
 			background-color: #f4f4f4;
 			border: 1px solid #ccc;
 			width: 75px;
@@ -57,7 +99,7 @@
 		}
 
 		.hash {
-			color: hsl(249, 100%, 32%);
+			color: rgb(24, 0, 163);
 			text-decoration: none;
 		}
 
@@ -77,11 +119,11 @@
 
 		h1 {
 			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-			font-size: 32px;
+			font-size: 30px;
 			font-weight: heavy;
 			margin: 0;
 			padding: 0;
-			color: hsl(196, 100%, 47%);
+			color: rgb(0, 176, 240);
 			display: inline;
 			position: relative;
 		}
@@ -92,7 +134,7 @@
 			font-weight: normal;
 			margin: 0;
 			padding: 0;
-			color: hsl(249, 100%, 32%);
+			color: rgb(24, 0, 163);
 		}
 
 		h3 {
@@ -114,158 +156,196 @@
 </head>
 
 <body>
-	<div class="body">
-	<div style="padding: 5px;">
-		<img class="inline" src="../Free Tool Friday.png" alt="Free Tool Friday Logo" height="100" />
-		<h1>Free Tool Friday - AutoHotKey</h1>
-		<img class="inline" src="/AutoHotKey Logo.png" alt="AutoHotKey Logo" height="100" />
-	</div>
-	<br>
-	<h2>Intro to Free Tool Friday</h2>
-	<p>
-		At TPM we pride ourselves on helping our customers have the right tools for them to succeed. I am here to
-		introduce an initiative help those in our own company succeed, so in turn we can have more time to better help
-		our customers.
-	</p>
-	<p>
-		My role in this is to share my experience with free software and computer tools that can improve your workflows
-		with a series called Free Tool Fridays. So be on the lookout for these emails from me in coming weeks as I
-		detail out the <a class="hash" href="#What">What</a>, <a class="hash" href="#Where">Where</a>, <a class="hash"
-			href="#Why">Why</a>, and <a class="hash" href="#How">How</a> of different free software.
-	</p>
-	<hr>
-	<h2 id="What">What is AutoHotKey?</h2>
-	<p>
-		AutoHotKey is a lightweight but very capable tool that anyone can customize their keyboard and mouse inputs with
-		macros to complete common tasks quicker.
-	</p>
-	<h2 id="Where">Where can I find AutoHotKey?</h2>
-	<p>
-		The AutoHotKey website can be found here: <a href="http://www.autohotkey.com/">http://www.autohotkey.com/</a>
-	</p>
-	<p>
-		I have also included the files discussed in this email on SharePoint here: <a
-			href="https://tpminc.sharepoint.com/:f:/r/sites/TPMteam/Shared%20Documents/IT%20-%20Helpful%20tricks/Free%20Tool%20Friday/AutoHotKey?csf=1&web=1&e=zz80gj">SharePoint
-			- AutoHotKey</a>
-	</p>
-	<h2 id="Why">Why should I use AutoHotKey?</h2>
-	<p>
-		You can save time typing out repeated words or phrases, reduce spelling mistakes, or create keyboard shortcuts
-		to complete common tasks.
-	</p>
-	<p>
-		For example, you could make it so every time you typed <code>@@</code> it would automatically replace it with
-		your email
-		address. Or if you type <code>sw</code> it changes it to <code>SOLIDWORKS</code>.
-	</p>
-	<h2 id="How">How do I set up AutoHotKey?</h2>
-	<p>
-		First, download AutoHotKey from the website or from the SharePoint link above.
-	</p>
-	<p>
-		Then, either create or download your first <code>.ahk</code> file. There are some example scripts on SharePoint.
-		You can also
-		open Notepad, type up your macro, then when save it, make sure you select "Save As Type" "All Files" and type
-		<code>.ahk</code> after the name of the file.
-	</p>
-	<img src="/Save As.png" alt="Save As" height="75" />
-	<p>
-		Once you have an <code>.ahk</code> file saved, right click on it in File Explorer. From here you can "Run
-		Script" once, or
-		"Compile Script" to create an executable file.
-	</p>
-	<img src="/Run or Compile.png" alt="Run or Compile" height="100" />
-	<p>
-		An executable file is useful if you want this script to always be running when Windows is running. Right click
-		on the .exe file and select "Create Shortcut." Now press
-		<kbd>
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 87.6" style="width: 11px;">
-				<polyline points="0 12.5 35.7 7.6 35.7 42.1 0 42.1" />
-				<polyline points="40 6.9 87.3 0 87.3 41.8 40 41.8" />
-				<polyline points="0 45.74 35.7 45.74 35.7 80.34 0 75.34" />
-				<polyline points="40 46.2 87.3 46.2 87.3 87.6 40 80.9" />
-			</svg>
-		</kbd>
-		+
-		<kbd>R</kbd> to open the Run command.
-		In here type <code>shell:startup</code> and press <kbd>Enter</kbd>. This will open a new File Explorer window
-		with a list of files to
-		be run when you login to Windows.
-	</p>
-	<img src="/Shell Startup.png" alt="Shell Startup" height="200" />
-	<p>
-		You can then place any shortcut's to exe's here that you would like running everytime you login.
-	</p>
-	<h2>How can I Make My Own Macros?</h2>
-	<p>
-		If you really want to dive in I would recommend reading the documentation here: <a
-			href="https://www.autohotkey.com/docs/Tutorial.htm#s2">AutoHotKey Tutorial</a> If you just want to get
-		started fast, use the files on SharePoint.
-	</p>
-	<h2>Hotstrings vs Hotkeys</h2>
-	<p>
-		Hotstrings is the term for when AutoHotKey replaces what you just typed with something else. First start the
-		macro with <code>::</code> then the string you want to type then <code>::</code> again, finishing it off with
-		what you want AutoHotKey to type for you.
-	</p>
-	<p>
-		For example: replacing <code>@@</code> with <code>josephcaswell@tpm.com</code>
-		<br>
-		<br>
-	<pre>::@@::josephcaswell@tpm.com</pre>
-	</p>
-	<p>
-		A slightly more complexe example is if you want to replace <code>sw</code> or any capitlization of
-		<code>SolidWorks</code>with <code>SOLIDWORKS</code>. <br><br>
-		<br>
-		<pre>
+	<table style="width: 100%;">
+		<tr>
+			<td width="auto"></td>
+			<td width="600px" class="body">
+				<table>
+					<tr width="600px">
+						<td>
+							<img class="inline" src="../Free Tool Friday.png" alt="Free Tool Friday Logo"
+							height="100" width="auto"/>
+						</td>
+						<td width="10px"></td>
+						<td style="text-align: center;">
+							<h1>Free Tool Friday - AutoHotKey</h1>
+						</td>
+						<td width="10px"></td>
+						<td>
+							<img class="inline" src="AutoHotKey Logo.png" alt="AutoHotKey Logo" height="100" width="auto"/>
+						</td>
+					</tr>
+				</table>
+				<h2>Intro to Free Tool Friday</h2>
+				<p>
+					At TPM we pride ourselves on helping our customers have the right tools for them to succeed. I
+					am here to
+					introduce an initiative help those in our own company succeed, so in turn we can have more time
+					to better help
+					our customers.
+				</p>
+				<p>
+					My role in this is to share my experience with free software and computer tools that can improve
+					your workflows
+					with a series called Free Tool Fridays. So be on the lookout for these emails from me in coming
+					weeks as I
+					detail out the <a class="hash" href="#What">What</a>, <a class="hash" href="#Where">Where</a>,
+					<a class="hash" href="#Why">Why</a>, and <a class="hash" href="#How">How</a> of different free
+					software.
+				</p>
+				<hr>
+				<h2 id="What">What is AutoHotKey?</h2>
+				<p>
+					AutoHotKey is a lightweight but very capable tool that anyone can customize their keyboard and
+					mouse inputs with
+					macros to complete common tasks quicker.
+				</p>
+				<h2 id="Where">Where can I find AutoHotKey?</h2>
+				<p>
+					The AutoHotKey website can be found here: <a
+						href="http://www.autohotkey.com/">http://www.autohotkey.com/</a>
+				</p>
+				<p>
+					I have also included the files discussed in this email on SharePoint here: <a
+						href="https://tpminc.sharepoint.com/:f:/r/sites/TPMteam/Shared%20Documents/IT%20-%20Helpful%20tricks/Free%20Tool%20Friday/AutoHotKey?csf=1&web=1&e=zz80gj">SharePoint
+						- AutoHotKey</a>
+				</p>
+				<h2 id="Why">Why should I use AutoHotKey?</h2>
+				<p>
+					You can save time typing out repeated words or phrases, reduce spelling mistakes, or create
+					keyboard shortcuts
+					to complete common tasks.
+				</p>
+				<p>
+					For example, you could make it so every time you typed <code>@@</code> it would automatically
+					replace it with
+					your email
+					address. Or if you type <code>sw</code> it changes it to <code>SOLIDWORKS</code>.
+				</p>
+				<h2 id="How">How do I set up AutoHotKey?</h2>
+				<p>
+					First, download AutoHotKey from the website or from the SharePoint link above.
+				</p>
+				<p>
+					Then, either create or download your first <code>.ahk</code> file. There are some example
+					scripts on SharePoint.
+					You can also
+					open Notepad, type up your macro, then when save it, make sure you select "Save As Type" "All
+					Files" and type
+					<code>.ahk</code> after the name of the file.
+				</p>
+				<img src="Save As.png" alt="Save As" height="75" />
+				<p>
+					Once you have an <code>.ahk</code> file saved, right click on it in File Explorer. From here you
+					can "Run
+					Script" once, or
+					"Compile Script" to create an executable file.
+				</p>
+				<img src="Run or Compile.png" alt="Run or Compile" height="100" />
+				<p>
+					An executable file is useful if you want this script to always be running when Windows is
+					running. Right click
+					on the .exe file and select "Create Shortcut." Now press
+					<kbd>
+						<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 87.3 87.6" style="width: 11px;">
+							<polyline points="0 12.5 35.7 7.6 35.7 42.1 0 42.1" />
+							<polyline points="40 6.9 87.3 0 87.3 41.8 40 41.8" />
+							<polyline points="0 45.74 35.7 45.74 35.7 80.34 0 75.34" />
+							<polyline points="40 46.2 87.3 46.2 87.3 87.6 40 80.9" />
+						</svg>
+					</kbd>
+					+
+					<kbd>R</kbd> to open the Run command.
+					In here type <code>shell:startup</code> and press <kbd>Enter</kbd>. This will open a new File
+					Explorer window
+					with a list of files to
+					be run when you login to Windows.
+				</p>
+				<img src="Shell Startup.PNG" alt="Shell Startup" height="200" />
+				<p>
+					You can then place any shortcut's to exe's here that you would like running everytime you login.
+				</p>
+				<h2>How can I Make My Own Macros?</h2>
+				<p>
+					If you really want to dive in I would recommend reading the documentation here: <a
+						href="https://www.autohotkey.com/docs/Tutorial.htm#s2">AutoHotKey Tutorial</a> If you just
+					want to get
+					started fast, use the files on SharePoint.
+				</p>
+				<h2>Hotstrings vs Hotkeys</h2>
+				<p>
+					Hotstrings is the term for when AutoHotKey replaces what you just typed with something else.
+					First start the
+					macro with <code>::</code> then the string you want to type then <code>::</code> again,
+					finishing it off with
+					what you want AutoHotKey to type for you.
+				</p>
+				<p>
+					For example: replacing <code>@@</code> with <code>josephcaswell@tpm.com</code>
+					<br>
+					<br>
+				<pre>::@@::josephcaswell@tpm.com</pre>
+				</p>
+				<p>
+					A slightly more complexe example is if you want to replace <code>sw</code> or any capitlization
+					of
+					<code>SolidWorks</code>with <code>SOLIDWORKS</code>. <br><br>
+					<br>
+				<pre>
 StringCaseSense, Off
 ::sw::SOLIDWORKS
 :*:solidworks::SOLIDWORKS</pre>
 
-Line 1 ignores capitlization. <br>
-Line 2 replaces sw with SOLIDWORKS if you press the spacebar afterwords. <br>Line 3 replaces solidworks with
-SOLIDWORKS.
-This line features <code>:*:</code> which means you do not have to press space.<br>
-Also note that the <code>StringCaseSense, Off</code> applies to the entire macro, and you can string together many different hotkeys or hotstrings all in the same file.
+				Line 1 ignores capitlization. <br>
+				Line 2 replaces sw with SOLIDWORKS if you press the spacebar afterwords. <br>Line 3 replaces
+				solidworks with
+				SOLIDWORKS.
+				This line features <code>:*:</code> which means you do not have to press space.<br>
+				Also note that the <code>StringCaseSense, Off</code> applies to the entire macro, and you can string
+				together many different hotkeys or hotstrings all in the same file.
 
-	</p>
-	<hr>
-	<p>
-		HotKeys are simply keyboard shortcuts to run a task. To code it type in the symbol for the key you want to
-		press, and the <code>::</code> and then type the code you want to run.
-	</p>
-	<table>
-		<tr>
-			<th>Key</th>
-			<th>Code</th>
-		</tr>
-		<tr>
-			<td>Ctrl</td>
-			<td>^</td>
-		</tr>
-		<tr>
-			<td>Alt</td>
-			<td>!</td>
-		</tr>
-		<tr>
-			<td>Shift</td>
-			<td>+</td>
-		</tr>
-		<tr>
-			<td>Win</td>
-			<td>#</td>
-		</tr>
+				</p>
+				<hr>
+				<p>
+					HotKeys are simply keyboard shortcuts to run a task. To code it type in the symbol for the key
+					you want to
+					press, and the <code>::</code> and then type the code you want to run.
+				</p>
+				<table class="table">
+					<tr class="bluebottom">
+						<th class="td">Key</th>
+						<th class="td">Code</th>
+					</tr>
+					<tr>
+						<td class="td">Ctrl</td>
+						<td class="td">^</td>
+					</tr>
+					<tr>
+						<td class="td">Alt</td>
+						<td class="td">!</td>
+					</tr>
+					<tr>
+						<td class="td">Shift</td>
+						<td class="td">+</td>
+					</tr>
+					<tr>
+						<td class="td">
+							<img src="Win.svg" alt="Win" height="20" />
+						</td>
+						<td class="td">#</td>
+					</tr>
 
+				</table>
+				<p>
+					For example if you wanted to press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>N</kbd> to open Notepad,
+					the macro would
+					read <br><br>
+					<code>^!t::Run, notepad.exe</code><br>
+				</p>
+			</td>
+			<td width="auto"></td>
+		</tr>
 	</table>
-	<p>
-		For example if you wanted to press <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>N</kbd> to open Notepad, the macro would
-		read <br><br>
-		<code>^!t::Run, notepad.exe</code><br>
-	</p>
-
-
-</div>
 </body>
 
 </html>
