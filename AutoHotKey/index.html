@@ -216,17 +216,19 @@
 	</p>
 	<p>
 		A slightly more complexe example is if you want to replace <code>sw</code> or any capitlization of
-		<code>SolidWorks</code>with <code>SOLIDWORKS</code>. <br>
-		Line 1 ignores capitlization. <br>
-		Line 2 replaces sw with SOLIDWORKS if you press the spacebar afterwords. <br>Line 3 replaces solidworks with
-		SOLIDWORKS.
-		This line features <code>:*:</code> which means you do not have to press space.
-		<br>
+		<code>SolidWorks</code>with <code>SOLIDWORKS</code>. <br><br>
 		<br>
 		<pre>
 StringCaseSense, Off
 ::sw::SOLIDWORKS
 :*:solidworks::SOLIDWORKS</pre>
+
+Line 1 ignores capitlization. <br>
+Line 2 replaces sw with SOLIDWORKS if you press the spacebar afterwords. <br>Line 3 replaces solidworks with
+SOLIDWORKS.
+This line features <code>:*:</code> which means you do not have to press space.<br>
+Also note that the <code>StringCaseSense, Off</code> applies to the entire macro, and you can string together many different hotkeys or hotstrings all in the same file.
+
 	</p>
 	<hr>
 	<p>
